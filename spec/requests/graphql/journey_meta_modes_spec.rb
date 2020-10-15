@@ -19,7 +19,9 @@ RSpec.describe 'Graphql::JourneyMetaModes', type: :request do
     }
 
     before do
-      post graphql_path, params: { query: query }
+      VCR.use_cassette('journey/authorised_client_modes') do
+        post graphql_path, params: { query: query }
+      end
     end
 
     it 'is successful' do

@@ -43,8 +43,8 @@ gem 'rubocop-rspec', require: false
 
 # Use brakeman for security scanning
 gem 'brakeman'
-
 gem 'graphql'
+gem 'tfl_api_client'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
