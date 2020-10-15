@@ -5,11 +5,17 @@ module Types
     # Add root-level fields here.
     # They will be entry points for queries on your schema.
 
-    # TODO: remove me
-    field :test_field, String, null: false,
-                               description: 'An example field added by the generator'
-    def test_field
-      'Hello World!'
+    field :journey_meta_modes, [ModeType], null: false,
+                               description: 'Gets a list of all of the available journey planner modes'
+    def journey_meta_modes
+      [
+        {
+        "isTflService": true,
+        "isFarePaying": true,
+        "isScheduledService": true,
+        "modeName": "foo"
+      }
+    ]
     end
   end
 end

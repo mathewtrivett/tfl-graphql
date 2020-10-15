@@ -71,8 +71,9 @@ group :test do
   gem 'rspec-graphql_matchers'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'selenium-webdriver'
-  gem 'simplecov', require: false
   gem 'shoulda-matchers'
+  gem 'simplecov', require: false
+  gem 'vcr'
   gem 'webdrivers'
 end
 
