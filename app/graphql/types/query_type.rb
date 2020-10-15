@@ -10,8 +10,7 @@ module Types
                                description: 'Gets a list of all of the available journey planner modes'
     def journey_meta_modes
       @client = TflApi::Client.new(app_id: ENV['TFL_APP_ID'], app_key: ENV['TFL_APP_KEY'], host: ENV['TFL_APP_BASE'])
-      res = @client.journey.modes
-      puts res
+      @client.journey.modes
     end
   end
 end
