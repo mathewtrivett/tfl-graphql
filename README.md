@@ -1,5 +1,7 @@
 # tfl_graph
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/44e2b4bfa9e1e1030fcc/maintainability)](https://codeclimate.com/github/mathewtrivett/tfl-graph/maintainability)
+
 Add a description for your project here
 
 ## Pre-requisites
@@ -19,7 +21,7 @@ Add a description for your project here
 
 ## Security
 
-This project uses [brakeman](https://github.com/presidentbeef/brakeman) to detect potential security vulnerabilities. Run `brakeman` in the root of the project to do a security scan. 
+This project uses [brakeman](https://github.com/presidentbeef/brakeman) to detect potential security vulnerabilities. Run `brakeman` in the root of the project to do a security scan.
 
 ## Tests
 
@@ -29,7 +31,7 @@ We use [rspec](https://github.com/rspec/rspec-rails) for automated tests. Run th
 
 > Don't document the program; program the document. -- unknown
 
-Documentation is important for your hygiene. 
+Documentation is important for your hygiene.
 
 Write and find [the documentation](docs/index.md) in the `docs` directory.
 
@@ -41,9 +43,7 @@ This project uses Architectural Decision Records to document technical decisions
 
 ## Deployment
 
-
 ## Contributing
-
 
 ### Style guide
 
@@ -56,6 +56,5 @@ The project uses [rubocop](https://github.com/rubocop-hq/rubocop) to maintain co
 - [rubocop-performance](https://github.com/rubocop-hq/rubocop-performance)
 
 #### SCSS
-
 
 #### JavaScript
