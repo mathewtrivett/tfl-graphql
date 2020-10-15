@@ -1,0 +1,13 @@
+{
+  // If not specified searches for 'rubocop' executable available on PATH (default and recommended)
+  "ruby.rubocop.executePath": "",
+
+  // If not specified, it assumes a null value by default.
+  "ruby.rubocop.configFilePath": ".rubocop.yml",
+
+  // default true
+  "ruby.rubocop.onSave": true,
+
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveTimeout": 5000
+}
