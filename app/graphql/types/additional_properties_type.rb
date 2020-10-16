@@ -1,0 +1,9 @@
+module Types
+  class AdditionalPropertiesType < Types::BaseObject
+    field :category, String, null: true
+    field :key, String, null: true
+    field :modified, String, null: true
+    field :sourceSystemKey, String, null: true
+    field :value, String, null: true
+  end
+end
