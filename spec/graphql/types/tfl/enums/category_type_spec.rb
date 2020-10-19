@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Types::CategoryType do
+describe Types::Tfl::Enums::CategoryType do
   subject { described_class }
 
   it { is_expected.to respond_to(:values) }
