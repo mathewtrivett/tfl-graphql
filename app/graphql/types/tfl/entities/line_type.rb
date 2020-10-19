@@ -10,7 +10,7 @@ module Types
         field :modeName, String, null: true
         field :modified, String, null: true
         field :name, String, null: true
-        field :routeSections, [Types::MatchedRouteType, null: true], null: true
+        field :routeSections, [Types::Tfl::Entities::MatchedRouteType, null: true], null: true
         field :serviceTypes, [Types::LineServiceTypeInfoType, null: true], null: true
       end
     end

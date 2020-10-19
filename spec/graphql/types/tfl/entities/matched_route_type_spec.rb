@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Types::MatchedRouteType do
+describe Types::Tfl::Entities::MatchedRouteType do
   subject { described_class }
 
   it { is_expected.to have_field(:destination).of_type('String') }
