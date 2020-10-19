@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Types::StopPointType do
+describe Types::Tfl::Entities::StopPointType do
   subject { described_class }
 
   it { is_expected.to have_field(:accessibilitySummary).of_type('String') }
