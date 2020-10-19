@@ -4,7 +4,7 @@ module Types
       class LineType < Types::BaseObject
         field :created, String, null: true
         field :crowding, Types::Tfl::Entities::CrowdingType, null: true
-        field :disruptions, [Types::DisruptionType, null: true], null: true
+        field :disruptions, [Types::Tfl::Entities::DisruptionType, null: true], null: true
         field :id, String, null: true
         field :lineStatuses, [Types::LineStatusType, null: true], null: true
         field :modeName, String, null: true
