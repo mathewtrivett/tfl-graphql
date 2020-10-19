@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Types::PathType do
+describe Types::Tfl::Entities::JourneyPlanner::PathType do
   subject { described_class }
 
   it { is_expected.to have_field(:elevation).of_type('[JpElevation]') }
