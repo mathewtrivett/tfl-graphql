@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Types::IdentifierType do
+describe Types::Tfl::Entities::IdentifierType do
   subject { described_class }
 
   it { is_expected.to have_field(:crowding).of_type('Crowding') }
