@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Types::PlaceType do
+describe Types::Tfl::Entities::PlaceType do
   subject { described_class }
 
   it { is_expected.to have_field(:additionalProperties).of_type('[AdditionalProperties]') }
