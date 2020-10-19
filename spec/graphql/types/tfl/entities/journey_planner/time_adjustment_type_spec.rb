@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Types::TimeAdjustmentType do
+describe Types::Tfl::Entities::JourneyPlanner::TimeAdjustmentType do
   subject { described_class }
 
   it { is_expected.to have_field(:date).of_type('String') }
