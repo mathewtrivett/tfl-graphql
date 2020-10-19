@@ -13,5 +13,5 @@ describe Types::JourneyPlannerFareType do
   it { is_expected.to have_field(:lowZone).of_type('Int') }
   it { is_expected.to have_field(:offPeak).of_type('Int') }
   it { is_expected.to have_field(:peak).of_type('Int') }
-  it { is_expected.to have_field(:taps).of_type('[JourneyPlannerFareTap]') }
+  it { is_expected.to have_field(:taps).of_type('[FareTap]') }
 end

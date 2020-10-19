@@ -8,6 +8,6 @@ module Types
     field :lowZone, Integer, null: true
     field :offPeak, Integer, null: true
     field :peak, Integer, null: true
-    field :taps, [Types::JourneyPlannerFareTapType, null: true], null: true
+    field :taps, [Types::Tfl::Entities::JourneyPlanner::FareTapType, null: true], null: true
   end
 end

@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Types::JourneyPlannerFareTapType do
+describe Types::Tfl::Entities::JourneyPlanner::FareTapType do
   subject { described_class }
 
   it { is_expected.to have_field(:atcoCode).of_type('String') }
