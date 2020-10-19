@@ -1,9 +1,9 @@
 module Types
-  module Tfl 
+  module Tfl
     module Entities
       class RouteSectionNaptanEntrySequenceType < Types::BaseObject
         field :ordinal, Integer, null: true
-        field :stopPoint, Types::StopPointType, null: true
+        field :stopPoint, Types::Tfl::Entities::StopPointType, null: true
       end
     end
   end
