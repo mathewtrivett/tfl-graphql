@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Types::JourneyVectorType do
+describe Types::Tfl::Entities::JourneyPlanner::JourneyVectorType do
   subject { described_class }
 
   it { is_expected.to have_field(:from).of_type('String') }
