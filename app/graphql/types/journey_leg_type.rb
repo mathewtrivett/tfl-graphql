@@ -10,7 +10,7 @@ module Types
     field :hasFixedLocations, Boolean, null: true
     field :instruction, Types::InstructionType, null: true
     field :isDisrupted, Boolean, null: true
-    field :mode, Types::IdentifierType, null: true
+    field :mode, Types::Tfl::Entities::IdentifierType, null: true
     field :obstacles, [Types::ObstacleType, null: true], null: true
     field :path, Types::PathType, null: true
     field :plannedWorks, [Types::PlannedWorkType, null: true], null: true
