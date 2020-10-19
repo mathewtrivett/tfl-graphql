@@ -3,7 +3,7 @@ module Types
     module Entities
       module JourneyPlanner
         class JourneyFareType < Types::BaseObject
-          field :caveats, [Types::JourneyPlannerFareCaveatType, null: true], null: true
+          field :caveats, [Types::Tfl::Entities::JourneyPlanner::FareCaveatType, null: true], null: true
           field :fares, [Types::JourneyPlannerFareType, null: true], null: true
           field :totalCost, Integer, null: true
         end
