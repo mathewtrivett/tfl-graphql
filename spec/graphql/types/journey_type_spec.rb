@@ -5,7 +5,9 @@ require 'rails_helper'
 describe Types::JourneyType do
   subject { described_class }
 
-  it { is_expected.to have_field(:arrivalDateTime) }
-  it { is_expected.to have_field(:startDateTime) }
-  it { is_expected.to have_field(:duration) }
+  it { is_expected.to have_field(:arrivalDateTime).of_type('String') }
+  it { is_expected.to have_field(:startDateTime).of_type('String') }
+  it { is_expected.to have_field(:duration).of_type('Int') }
+  it { is_expected.to have_field(:fare).of_type('JourneyFare') }
+  it { is_expected.to have_field(:legs).of_type('[JourneyLeg]') }
 end
