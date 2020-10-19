@@ -11,7 +11,7 @@ module Types
           field :distance, Float, null: true
           field :duration, Integer, null: true
           field :hasFixedLocations, Boolean, null: true
-          field :instruction, Types::InstructionType, null: true
+          field :instruction, Types::Tfl::Entities::InstructionType, null: true
           field :isDisrupted, Boolean, null: true
           field :mode, Types::Tfl::Entities::IdentifierType, null: true
           field :obstacles, [Types::ObstacleType, null: true], null: true
