@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Types::PlannedWorkType do
+describe Types::Tfl::Entities::JourneyPlanner::PlannedWorkType do
   subject { described_class }
 
   it { is_expected.to have_field(:createdDateTime).of_type('String') }
