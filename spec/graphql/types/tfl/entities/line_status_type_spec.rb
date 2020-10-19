@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Types::LineStatusType do
+describe Types::Tfl::Entities::LineStatusType do
   subject { described_class }
 
   it { is_expected.to have_field(:id).of_type('Int') }

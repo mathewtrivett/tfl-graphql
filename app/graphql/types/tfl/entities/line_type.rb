@@ -6,7 +6,7 @@ module Types
         field :crowding, Types::Tfl::Entities::CrowdingType, null: true
         field :disruptions, [Types::Tfl::Entities::DisruptionType, null: true], null: true
         field :id, String, null: true
-        field :lineStatuses, [Types::LineStatusType, null: true], null: true
+        field :lineStatuses, [Types::Tfl::Entities::LineStatusType, null: true], null: true
         field :modeName, String, null: true
         field :modified, String, null: true
         field :name, String, null: true
