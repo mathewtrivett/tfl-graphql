@@ -5,7 +5,7 @@ module Types
         field :additionalInfo, String, null: true
         field :affectedRoutes, [Types::Tfl::Entities::RouteSectionType, null: true], null: true
         field :affectedStops, [Types::Tfl::Entities::StopPointType, null: true], null: true
-        field :category, Types::CategoryType, null: true
+        field :category, Types::Tfl::Enums::CategoryType, null: true
         field :categoryDescription, String, null: true
         field :closureText, String, null: true
         field :created, String, null: true

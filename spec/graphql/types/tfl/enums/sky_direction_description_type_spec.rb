@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Types::SkyDirectionDescriptionType do
+describe Types::Tfl::Enums::SkyDirectionDescriptionType do
   subject { described_class }
 
   it { is_expected.to respond_to(:values) }

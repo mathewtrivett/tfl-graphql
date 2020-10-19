@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Types::RouteType do
+describe Types::Tfl::Enums::RouteType do
   subject { described_class }
 
   it { is_expected.to respond_to(:values) }

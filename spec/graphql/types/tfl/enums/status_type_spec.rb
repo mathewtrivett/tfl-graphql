@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Types::StatusType do
+describe Types::Tfl::Enums::StatusType do
   subject { described_class }
 
   it { is_expected.to respond_to(:values) }

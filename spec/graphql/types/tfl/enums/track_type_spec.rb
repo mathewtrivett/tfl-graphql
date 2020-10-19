@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Types::TrackType do
+describe Types::Tfl::Enums::TrackType do
   subject { described_class }
 
   it { is_expected.to respond_to(:values) }
