@@ -16,7 +16,7 @@ module Types
           field :mode, Types::Tfl::Entities::IdentifierType, null: true
           field :obstacles, [Types::Tfl::Entities::JourneyPlanner::ObstacleType, null: true], null: true
           field :path, Types::Tfl::Entities::JourneyPlanner::PathType, null: true
-          field :plannedWorks, [Types::PlannedWorkType, null: true], null: true
+          field :plannedWorks, [Types::Tfl::Entities::JourneyPlanner::PlannedWorkType, null: true], null: true
           field :routeOptions, [Types::RouteOptionType, null: true], null: true
           field :speed, String, null: true
         end
