@@ -9,7 +9,7 @@ module Types
         field :distance, Integer, null: true
         field :latitude, Float, null: true
         field :longitude, Float, null: true
-        field :pathAttribute, Types::PathAttributeType, null: true
+        field :pathAttribute, Types::Tfl::Entities::PathAttributeType, null: true
         field :skyDirection, Integer, null: true
         field :skyDirectionDescription, Types::SkyDirectionDescriptionType, null: true
         field :streetName, String, null: true

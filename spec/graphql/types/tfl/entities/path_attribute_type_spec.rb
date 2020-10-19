@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Types::PathAttributeType do
+describe Types::Tfl::Entities::PathAttributeType do
   subject { described_class }
 
   it { is_expected.to have_field(:name).of_type('String') }
