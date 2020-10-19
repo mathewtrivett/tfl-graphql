@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Types::ItineraryResultType do
+describe Types::Tfl::Entities::JourneyPlanner::ItineraryResultType do
   subject { described_class }
 
   it { is_expected.to have_field(:stopMessages).of_type('[String]') }
