@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Types::JourneyLegType do
+describe Types::Tfl::Entities::JourneyPlanner::LegType do
   subject { described_class }
 
   it { is_expected.to have_field(:arrivalPoint).of_type('Point') }
