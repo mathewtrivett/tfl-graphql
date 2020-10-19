@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Types::CrowdingType do
+describe Types::Tfl::Entities::CrowdingType do
   subject { described_class }
 
   it { is_expected.to have_field(:passengerFlows).of_type('[PassengerFlow]') }
