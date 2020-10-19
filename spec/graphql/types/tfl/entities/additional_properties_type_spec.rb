@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Types::AdditionalPropertiesType do
+describe Types::Tfl::Entities::AdditionalPropertiesType do
   subject { described_class }
 
   it { is_expected.to have_field(:category).of_type('String') }
