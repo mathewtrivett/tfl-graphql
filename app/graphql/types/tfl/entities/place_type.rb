@@ -1,8 +1,8 @@
 module Types
   module Tfl
-      module Entities
+    module Entities
       class PlaceType < Types::BaseObject
-        field :additionalProperties, [Types::AdditionalPropertiesType, null: true], null: true
+        field :additionalProperties, [Types::Tfl::Entities::AdditionalPropertiesType, null: true], null: true
         field :children, [Types::Tfl::Entities::PlaceType, null: true], null: true
         field :childrenUrls, [String, null: true], null: true
         field :commonName, String, null: true
