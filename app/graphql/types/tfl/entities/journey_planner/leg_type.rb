@@ -14,7 +14,7 @@ module Types
           field :instruction, Types::Tfl::Entities::InstructionType, null: true
           field :isDisrupted, Boolean, null: true
           field :mode, Types::Tfl::Entities::IdentifierType, null: true
-          field :obstacles, [Types::ObstacleType, null: true], null: true
+          field :obstacles, [Types::Tfl::Entities::JourneyPlanner::ObstacleType, null: true], null: true
           field :path, Types::PathType, null: true
           field :plannedWorks, [Types::PlannedWorkType, null: true], null: true
           field :routeOptions, [Types::RouteOptionType, null: true], null: true
