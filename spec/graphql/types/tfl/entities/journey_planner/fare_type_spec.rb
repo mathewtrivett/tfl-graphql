@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Types::JourneyPlannerFareType do
+describe Types::Tfl::Entities::JourneyPlanner::FareType do
   subject { described_class }
 
   it { is_expected.to have_field(:chargeLevel).of_type('String') }
