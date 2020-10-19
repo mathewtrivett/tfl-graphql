@@ -10,7 +10,7 @@ module Types
         field :reason, String, null: true
         field :statusSeverity, Integer, null: true
         field :statusSeverityDescription, String, null: true
-        field :validityPeriods, [Types::ValidityPeriodType, null: true], null: true
+        field :validityPeriods, [Types::Tfl::Entities::ValidityPeriodType, null: true], null: true
       end
     end
   end

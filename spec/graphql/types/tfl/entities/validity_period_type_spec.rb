@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Types::ValidityPeriodType do
+describe Types::Tfl::Entities::ValidityPeriodType do
   subject { described_class }
 
   it { is_expected.to have_field(:fromDate).of_type('String') }
