@@ -10,7 +10,7 @@ module Types
         field :name, String, null: true
         field :originationName, String, null: true
         field :routeCode, String, null: true
-        field :routeSectionNaptanEntrySequence, [Types::RouteSectionNaptanEntrySequenceType, null: true], null: true
+        field :routeSectionNaptanEntrySequence, [Types::Tfl::Entities::RouteSectionNaptanEntrySequenceType, null: true], null: true
         field :validFrom, String, null: true
         field :validTo, String, null: true
       end
