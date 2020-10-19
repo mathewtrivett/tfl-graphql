@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Types::FareTapDetailsType do
+describe Types::Tfl::Entities::JourneyPlanner::FareTapDetailsType do
   subject { described_class }
 
   it { is_expected.to have_field(:busRouteId).of_type('String') }
