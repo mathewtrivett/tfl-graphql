@@ -1,6 +1,6 @@
 module Types
   class IdentifierType < Types::BaseObject
-    field :crowding, Types::CrowdingType, null: true
+    field :crowding, Types::Tfl::Entities::CrowdingType, null: true
     field :fullName, String, null: true
     field :id, String, null: true
     field :name, String, null: true
