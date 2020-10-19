@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Types::InstructionStepType do
+describe Types::Tfl::Entities::InstructionStepType do
   subject { described_class }
 
   it { is_expected.to have_field(:cumulativeDistance).of_type('Int') }
