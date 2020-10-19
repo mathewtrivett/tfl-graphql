@@ -3,9 +3,9 @@ module Types
     module Entities
       module JourneyPlanner
         class LegType < Types::BaseObject
-          field :arrivalPoint, Types::PointType, null: true
+          field :arrivalPoint, Types::Tfl::Entities::PointType, null: true
           field :arrivalTime, String, null: true
-          field :departurePoint, Types::PointType, null: true
+          field :departurePoint, Types::Tfl::Entities::PointType, null: true
           field :departureTime, String, null: true
           field :disruptions, [Types::Tfl::Entities::DisruptionType, null: true], null: true
           field :distance, Float, null: true
