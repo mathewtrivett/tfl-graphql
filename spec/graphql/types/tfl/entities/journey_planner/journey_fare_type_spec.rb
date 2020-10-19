@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Types::JourneyFareType do
+describe Types::Tfl::Entities::JourneyPlanner::JourneyFareType do
   subject { described_class }
 
   it { is_expected.to have_field(:caveats).of_type('[JourneyPlannerFareCaveat]') }
