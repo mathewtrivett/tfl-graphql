@@ -11,7 +11,7 @@ module Types
         field :modified, String, null: true
         field :name, String, null: true
         field :routeSections, [Types::Tfl::Entities::MatchedRouteType, null: true], null: true
-        field :serviceTypes, [Types::LineServiceTypeInfoType, null: true], null: true
+        field :serviceTypes, [Types::Tfl::Entities::LineServiceTypeInfoType, null: true], null: true
       end
     end
   end
