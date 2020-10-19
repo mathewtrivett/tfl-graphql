@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Types::TrainLoadingType do
+describe Types::Tfl::Entities::TrainLoadingType do
   subject { described_class }
 
   it { is_expected.to have_field(:direction).of_type('String') }
