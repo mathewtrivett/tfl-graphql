@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Types::ModeType do
+describe Types::Tfl::Entities::ModeType do
   subject { described_class }
 
   it { is_expected.to have_field(:isTflService).of_type('Boolean') }
