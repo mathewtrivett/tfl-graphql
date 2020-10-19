@@ -1,7 +1,7 @@
 
 require 'rails_helper'
 
-describe Types::RouteSectionType do
+describe Types::Tfl::Entities::RouteSectionType do
   subject { described_class }
 
   it { is_expected.to have_field(:destinationName).of_type('String') }
