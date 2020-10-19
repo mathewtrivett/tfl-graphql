@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Types::DisruptionType do
+describe Types::Tfl::Entities::DisruptionType do
   subject { described_class }
 
   it { is_expected.to have_field(:additionalInfo).of_type('String') }

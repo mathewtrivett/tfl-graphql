@@ -4,7 +4,7 @@ module Types
     field :arrivalTime, String, null: true
     field :departurePoint, Types::PointType, null: true
     field :departureTime, String, null: true
-    field :disruptions, [Types::DisruptionType, null: true], null: true
+    field :disruptions, [Types::Tfl::Entities::DisruptionType, null: true], null: true
     field :distance, Float, null: true
     field :duration, Integer, null: true
     field :hasFixedLocations, Boolean, null: true

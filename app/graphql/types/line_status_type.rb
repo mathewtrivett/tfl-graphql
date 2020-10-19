@@ -2,7 +2,7 @@ module Types
   class LineStatusType < Types::BaseObject
     field :id, Integer, null: true
     field :created, String, null: true
-    field :disruption, Types::DisruptionType, null: true
+    field :disruption, Types::Tfl::Entities::DisruptionType, null: true
     field :lineId, String, null: true
     field :modified, String, null: true
     field :reason, String, null: true
