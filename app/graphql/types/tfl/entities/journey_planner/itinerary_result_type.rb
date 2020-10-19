@@ -9,7 +9,7 @@ module Types
           field :journeys, [Types::Tfl::Entities::JourneyPlanner::JourneyType, null: true], null: true
           field :journeyVector, Types::Tfl::Entities::JourneyPlanner::JourneyVectorType, null: true
           field :searchCriteria, Types::Tfl::Entities::JourneyPlanner::SearchCriteriaType, null: true
-          field :cycleHireDockingStationData, Types::CycleHireDockingStationDataType, null: true
+          field :cycleHireDockingStationData, Types::Tfl::Entities::JourneyPlanner::CycleHireDockingStationDataType, null: true
         end
       end
     end
