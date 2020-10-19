@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Types::JourneyType do
+describe Types::Tfl::Entities::JourneyPlanner::JourneyType do
   subject { described_class }
 
   it { is_expected.to have_field(:arrivalDateTime).of_type('String') }
