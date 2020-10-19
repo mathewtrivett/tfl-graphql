@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Types::ObstacleType do
+describe Types::Tfl::Entities::JourneyPlanner::ObstacleType do
   subject { described_class }
 
   it { is_expected.to have_field(:incline).of_type('String') }
