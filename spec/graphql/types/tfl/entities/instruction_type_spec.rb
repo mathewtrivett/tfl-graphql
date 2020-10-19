@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Types::InstructionType do
+describe Types::Tfl::Entities::InstructionType do
   subject { described_class }
 
   it { is_expected.to have_field(:detailed).of_type('String') }
