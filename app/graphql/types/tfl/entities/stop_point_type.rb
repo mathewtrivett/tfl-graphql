@@ -15,7 +15,7 @@ module Types
         field :indicator, String, null: true
         field :lat, Float, null: true
         field :lineGroup, [Types::Tfl::Entities::LineGroupType, null: true], null: true
-        field :lineModeGroups, [Types::LineModeGroupType, null: true], null: true
+        field :lineModeGroups, [Types::Tfl::Entities::LineModeGroupType, null: true], null: true
         field :lines, [Types::IdentifierType, null: true], null: true
         field :lon, Float, null: true
         field :modes, [String, null: true], null: true

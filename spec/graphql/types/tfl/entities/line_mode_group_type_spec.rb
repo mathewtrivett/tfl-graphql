@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Types::LineModeGroupType do
+describe Types::Tfl::Entities::LineModeGroupType do
   subject { described_class }
 
   it { is_expected.to have_field(:lineIdentifier).of_type('[String]') }
