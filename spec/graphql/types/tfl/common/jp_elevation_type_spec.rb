@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe Types::JpElevationType do
+describe Types::Tfl::Common::JpElevationType do
   subject { described_class }
 
   it { is_expected.to have_field(:distance).of_type('Int') }
