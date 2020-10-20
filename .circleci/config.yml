@@ -6,6 +6,10 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.7.0
+        environment:
+          - TFL_APP_KEY: test-tfl-app-key
+          - TFL_APP_ID: test-tfl-app-id
+          - TFL_APP_BASE: https://api.tfl.gov.uk
     executor: ruby/default
     steps:
       - checkout
