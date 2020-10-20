@@ -40,7 +40,7 @@ jobs:
           path: coverage
       - run:
           name: Format coverage
-          command: ./cc-test-reporter format-coverage -t simplecov
+          command: ./cc-test-reporter format-coverage -t simplecov coverage/.last_run.json
       - run:
-          name: Sum coverage and upload
-          command: ./cc-test-reporter sum-coverage | ./cc-test-reporter upload-coverage
+          name: Upload coverage
+          command: ./cc-test-reporter upload-coverage
