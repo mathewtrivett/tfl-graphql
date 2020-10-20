@@ -1,8 +1,7 @@
 # tfl_graph
 
 [![mathewtrivett](https://circleci.com/gh/mathewtrivett/tfl-graphql.svg?style=shield)](https://app.circleci.com/pipelines/github/mathewtrivett/tfl-graphql)
-
-[![Maintainability](https://api.codeclimate.com/v1/badges/44e2b4bfa9e1e1030fcc/maintainability)](https://codeclimate.com/github/mathewtrivett/tfl-graph/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/44e2b4bfa9e1e1030fcc/maintainability)](https://codeclimate.com/github/mathewtrivett/tfl-graph/maintainability)[![Test Coverage](https://api.codeclimate.com/v1/badges/44e2b4bfa9e1e1030fcc/test_coverage)](https://codeclimate.com/github/mathewtrivett/tfl-graph/test_coverage)
 
 Add a description for your project here
 
