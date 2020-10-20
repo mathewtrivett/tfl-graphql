@@ -10,6 +10,7 @@ jobs:
           - TFL_APP_KEY: test-tfl-app-key
           - TFL_APP_ID: test-tfl-app-id
           - TFL_APP_BASE: https://api.tfl.gov.uk
+          - CC_TEST_REPORTER_ID: 4c515aa8be6aa66df39ae25db619d60a7b8a2c9241940100c480d7271a787abe
     executor: ruby/default
     steps:
       - checkout
@@ -25,7 +26,18 @@ jobs:
             - ./vendor/bundle
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
       - run:
+          name: Install Code Climate Test Reporter
+          command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+      - run:
           name: Run the tests
-          command: bundle exec rake
+          command: ./cc-test-report before-build bundle exec rake
       - store_artifacts:
           path: coverage
+      - run:
+          name: Format coverage
+          command: ./cc-test-report format-coverage -f simplecov
+      - run:
+          name: Sum coverage and upload
+          command: ./cc-test-report sum-coverage | ./cc-test-report upload-coverage
