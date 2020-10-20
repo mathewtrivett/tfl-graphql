@@ -40,7 +40,7 @@ jobs:
           path: coverage
       - run:
           name: Format coverage
-          command: ./cc-test-reporter format-coverage -t simplecov coverage/index.html
+          command: ./cc-test-reporter format-coverage -t simplecov -o coverage/codeclimate.json coverage/.resultset.json
       - run:
           name: Upload coverage
           command: ./cc-test-reporter upload-coverage
