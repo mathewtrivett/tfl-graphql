@@ -32,12 +32,12 @@ jobs:
             chmod +x ./cc-test-reporter
       - run:
           name: Run the tests
-          command: ./cc-test-report before-build bundle exec rake
+          command: ./cc-test-reporter before-build bundle exec rake
       - store_artifacts:
           path: coverage
       - run:
           name: Format coverage
-          command: ./cc-test-report format-coverage -f simplecov
+          command: ./cc-test-reporter format-coverage -f simplecov
       - run:
           name: Sum coverage and upload
-          command: ./cc-test-report sum-coverage | ./cc-test-report upload-coverage
+          command: ./cc-test-reporter sum-coverage | ./cc-test-reporter upload-coverage
