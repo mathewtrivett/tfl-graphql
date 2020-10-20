@@ -1,6 +1,6 @@
 # tfl_graph
 
-[![mathewtrivett](https://circleci.com/github/mathewtrivett/tfl-graphql.svg?style=svg)](https://app.circleci.com/pipelines/github/mathewtrivett/tfl-graphql)
+[![mathewtrivett](https://circleci.com/gh/mathewtrivett/tfl-graphql.svg?style=svg)](https://app.circleci.com/pipelines/github/mathewtrivett/tfl-graphql)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/44e2b4bfa9e1e1030fcc/maintainability)](https://codeclimate.com/github/mathewtrivett/tfl-graph/maintainability)
 
