@@ -12,7 +12,7 @@ module Types
                                
     field :get_accident_stats, [Tfl::Entities::AccidentStats::DetailType], null: true do
       description 'Gets all accident details for accidents occuring in the specified year'
-      argument :year, Integer, required: true
+      argument :year, Integer, description: 'The year for which to filter the accidents on.', required: true
     end
 
     def journey_meta_modes

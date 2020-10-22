@@ -9,6 +9,7 @@ RSpec.describe "Graphql::AccidentStats", type: :request do
           id
           lat
           lon
+          location
         }
       }
     )
@@ -54,6 +55,15 @@ RSpec.describe "Graphql::AccidentStats", type: :request do
       it 'returns a data array' do
         json = JSON.parse(response.body)
         expect(json).to include('data')
+      end
+
+      it 'returns Entities::Place objects' do
+        json = JSON.parse(response.body)
+        place = json['data']['getAccidentStats'][0]
+        expect(place).to include('id')
+        expect(place).to include('lat')
+        expect(place).to include('lon')
+        expect(place).to include('location')
       end
     end
 
