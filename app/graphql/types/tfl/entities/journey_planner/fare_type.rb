@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Types
   module Tfl
     module Entities
@@ -17,4 +19,3 @@ module Types
     end
   end
 end
-

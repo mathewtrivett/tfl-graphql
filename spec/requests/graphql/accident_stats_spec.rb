@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 require 'json'
 
-RSpec.describe "Graphql::AccidentStats", type: :request do
+RSpec.describe 'Graphql::AccidentStats', type: :request do
   describe 'getAccidentStats' do
     context 'with a year parameter' do
-      let (:valid_query) do
+      let(:valid_query) do
         %(
           {
             getAccidentStats(year:2015) {
@@ -27,7 +29,7 @@ RSpec.describe "Graphql::AccidentStats", type: :request do
       end
 
       it 'returns 200' do
-        expect(response).to have_http_status(200)
+        expect(response).to have_http_status(:ok)
       end
 
       it 'returns a data array' do
@@ -40,7 +42,7 @@ RSpec.describe "Graphql::AccidentStats", type: :request do
     end
 
     context 'without a year parameter' do
-      let (:missing_year) do
+      let(:missing_year) do
         %(
           {
             getAccidentStats() {
@@ -50,7 +52,7 @@ RSpec.describe "Graphql::AccidentStats", type: :request do
         )
       end
 
-      let (:json) { JSON.parse(response.body) }
+      let(:json) { JSON.parse(response.body) }
 
       before do
         VCR.use_cassette('accident_stats/authorised_client_details') do
@@ -59,7 +61,7 @@ RSpec.describe "Graphql::AccidentStats", type: :request do
       end
 
       it 'returns a 200' do
-        expect(response).to have_http_status(200)
+        expect(response).to have_http_status(:ok)
       end
 
       it 'returns an errors array' do
@@ -87,7 +89,7 @@ RSpec.describe "Graphql::AccidentStats", type: :request do
       end
 
       it 'returns a 200' do
-        expect(response).to have_http_status(200)
+        expect(response).to have_http_status(:ok)
       end
 
       it 'returns an errors array' do
