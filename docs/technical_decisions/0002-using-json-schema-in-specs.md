@@ -4,7 +4,7 @@
 
 GraphQL recommends [testing the behaviour of a GraphQL API from the client's perspective](https://graphql-ruby.org/testing/integration_tests.html).
 
-We need to test the data returned from GraphQL queries conforms to the type defintion system.
+We need to test that the data returned from GraphQL queries conforms to the type definition system.
 
 ### Option explored
 
@@ -32,11 +32,12 @@ JSONSchema provides a declarative domain specific language to define and validat
 
 `tfl-graphql` uses [JSON Schema](https://json-schema.org/understanding-json-schema/) validation to test responses from GraphQL queries.
 
-It implements a [custom RSpec Matcher](../../../spec/support/schema_matcher.rb) based on [this article from Thoughtbot](https://thoughtbot.com/blog/validating-json-schemas-with-an-rspec-matcher).
+It implements a [custom RSpec Matcher](/spec/support/schema_matcher.rb) based on [this article from Thoughtbot](https://thoughtbot.com/blog/validating-json-schemas-with-an-rspec-matcher).
 
 This matches a given object against schema defined in `spec/schemas`.
 
 ## Status
+
 Accepted
 
 ## Consequences
@@ -44,8 +45,8 @@ Accepted
 ### Pros
 
 - We can now dynammically test schemas conform to GraphQL type definitions.
-- Our RSpec expectations can be kept short to a one liner.
-- We have valid JSON Schema that could be reused for other purposes if we need them.
+- Our RSpec expectations for schema validation can be short one liners using the `matches_response_schema(schema_path)` matcher.
+- We have valid JSON schema that could be reused for other purposes if we need them.
 
 ### Cons
 
