@@ -5,7 +5,7 @@ require 'json'
 
 RSpec.describe 'Graphql::JourneyMetaModes', type: :request do
   describe 'GET /Journey/Meta/Modes' do
-    let(:query) {
+    let(:query) do
       %(
         {
           journeyMetaModes {
@@ -16,7 +16,7 @@ RSpec.describe 'Graphql::JourneyMetaModes', type: :request do
           }
         }
       )
-    }
+    end
 
     before do
       VCR.use_cassette('journey/authorised_client_modes') do

@@ -1,8 +1,9 @@
+# frozen_string_literal: true
 
 require 'vcr'
 
 VCR.configure do |config|
-  config.cassette_library_dir = File.expand_path('../../cassettes', __FILE__)
+  config.cassette_library_dir = File.expand_path('../cassettes', __dir__)
   config.hook_into :webmock
   config.configure_rspec_metadata!
 
