@@ -6,6 +6,7 @@ SimpleCov.start 'rails'
 # Loads support for FactoryBot methods in specs
 require 'support/factory_bot'
 require 'support/vcr_tfl_api'
+require 'support/schema_matcher.rb'
 require 'rspec/graphql_matchers'
 include RSpec::GraphqlMatchers::TypesHelper
 
