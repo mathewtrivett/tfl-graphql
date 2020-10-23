@@ -1,0 +1,42 @@
+{
+  "definitions": {
+    "place": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string"},
+        "url": { "type": "string" },
+        "lat": { "type": "number" },
+        "lon": { "type": "number" },  
+        "commonName": { "type": "string" },
+        "distance": { "type": "integer" },
+        "placeType": { "type": "string" },
+        "additionalProperties": { 
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "category": "string",
+              "key": "string",
+              "sourceSystemKey": "string",
+              "value": "string",
+              "modified": "string"
+            }
+          }
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/place"
+          }
+        },
+        "childrenUrls": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "$ref": "#/definitions/place"
+}
