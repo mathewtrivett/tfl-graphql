@@ -2,15 +2,39 @@
 
 ## Context
 
-GraphQL recommends testing
+GraphQL recommends [testing the behaviour of a GraphQL API from the client's perspective](https://graphql-ruby.org/testing/integration_tests.html).
 
-To test the behaviour of the system, we need to test what happens when we request data from GraphQL.
+We need to test the data returned from GraphQL queries conforms to the type defintion system.
 
-This potentially could be achieved using FactoryBot. Equally there may also be a way to genea
+### Option explored
+
+1. Individual expectations
+
+For example validating each key in a response.
+
+```ruby
+expect(response).to include('id')
+expect(response).to include('commonName')
+expect(response).to include('stops)
+```
+
+2. FactoryBot
+
+This potentially could be achieved using [FactoryBot](https://github.com/thoughtbot/factory_bot). However validating against dynamic GraphQL queries may not be possible. For example if we wanted to test that a GraphQL query can return just one key from a type AND test the same query can return multiple keys.
+
+In testing GraphQL responses, we are primarily interesting in the shape and structure of data and not really the content.
+
+3. JSONSchema
+
+JSONSchema provides a declarative domain specific language to define and validate the schema for JSON objects. Furthermore, it allows us to define a JSON schema and test conformity.
 
 ## Decision
 
-`tfl-graphql` uses JSON Schema validation to test responses from GraphQL queries.
+`tfl-graphql` uses [JSON Schema](https://json-schema.org/understanding-json-schema/) validation to test responses from GraphQL queries.
+
+It implements a [custom RSpec Matcher](../../../spec/support/schema_matcher.rb) based on [this article from Thoughtbot](https://thoughtbot.com/blog/validating-json-schemas-with-an-rspec-matcher).
+
+This matches a given object against schema defined in `spec/schemas`.
 
 ## Status
 Accepted
@@ -19,10 +43,10 @@ Accepted
 
 ### Pros
 
-- The project should be easier to maintain and understand for developers coming to the project. They should be able to mentally map the OpenAPI spec to GraphQL types.
-- The root type space can be kept clean for base GraphQl types.
-- The GraphQL type system can be extended without as much concern for naming collision.
+- We can now dynammically test schemas conform to GraphQL type definitions.
+- Our RSpec expectations can be kept short to a one liner.
+- We have valid JSON Schema that could be reused for other purposes if we need them.
 
 ### Cons
 
-- There is extra work needed to define the JSON Schema we expect from GraphQL queries.
+- There is extra work needed to define the JSON Schema we expect from GraphQL queries. Longer term we could explore automatically generating these schema, perhaps by consuming the OpenAPI spec.
