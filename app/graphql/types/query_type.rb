@@ -44,29 +44,38 @@ module Types
       argument :query, String, description: 'The search term e.g. "St. James"', required: true
     end
 
+    field :get_air_quality, Tfl::Entities::LondonAirForecastType, null: true do
+      description 'Gets air quality data feed'
+    end
+
     def journey_meta_modes
       @tfl = TflApi::Client.new(app_id: ENV['TFL_APP_ID'], app_key: ENV['TFL_APP_KEY'], host: ENV['TFL_APP_BASE'])
       @tfl.journey.modes
     end
 
     def get_accident_stats(params)
-      @tfl = TflApi::Client.new(app_id: ENV['TFL_APP_ID'], app_key: ENV['TFL_APP_KEY'], host: ENV['TFL_APP_BASE'], log_level: 'ERROR')
+      @tfl = TflApi::Client.new(app_id: ENV['TFL_APP_ID'], app_key: ENV['TFL_APP_KEY'], host: ENV['TFL_APP_BASE'])
       @tfl.accident_stats.details(params[:year])
     end
 
     def get_all_bike_points
-      @tfl = TflApi::Client.new(app_id: ENV['TFL_APP_ID'], app_key: ENV['TFL_APP_KEY'], host: ENV['TFL_APP_BASE'], log_level: 'ERROR')
+      @tfl = TflApi::Client.new(app_id: ENV['TFL_APP_ID'], app_key: ENV['TFL_APP_KEY'], host: ENV['TFL_APP_BASE'])
       @tfl.bike_point.locations
     end
 
     def get_bike_point(params)
-      @tfl = TflApi::Client.new(app_id: ENV['TFL_APP_ID'], app_key: ENV['TFL_APP_KEY'], host: ENV['TFL_APP_BASE'], log_level: 'ERROR')
+      @tfl = TflApi::Client.new(app_id: ENV['TFL_APP_ID'], app_key: ENV['TFL_APP_KEY'], host: ENV['TFL_APP_BASE'])
       @tfl.bike_point.location params[:id]
     end
 
     def search_bike_points(params)
-      @tfl = TflApi::Client.new(app_id: ENV['TFL_APP_ID'], app_key: ENV['TFL_APP_KEY'], host: ENV['TFL_APP_BASE'], log_level: 'ERROR')
+      @tfl = TflApi::Client.new(app_id: ENV['TFL_APP_ID'], app_key: ENV['TFL_APP_KEY'], host: ENV['TFL_APP_BASE'])
       @tfl.bike_point.search params[:query]
+    end
+
+    def get_air_quality
+      @tfl = TflApi::Client.new(app_id: ENV['TFL_APP_ID'], app_key: ENV['TFL_APP_KEY'], host: ENV['TFL_APP_BASE'])
+      @tfl.air_quality.details
     end
   end
 end

@@ -1,0 +1,39 @@
+{
+  "definitions": {
+    "londonForecast": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string"},
+        "type": { "type": "string" },
+        "updatePeriod": { "type": "string" },
+        "updateFrequency": { "type": "string" },  
+        "foreCastUrl": { "type": "string" },
+        "disclaimerText": { "type": "string" },
+        "currentForeCast": { 
+          "type": "array",
+          "items": {
+            "$ref": "#/defintions/currentForecast"
+          }
+        }
+      }
+    }
+  },
+  "currentForecast": {
+    "type": "object",
+    "properties": {
+      "id": { "type": "string"},
+      "type": { "type": "string" },
+      "forecastType": { "type": "string" },
+      "forecastID": { "type": "string" },
+      "forecastBand": { "type": "string" },
+      "forecastSummary": { "type": "string" },
+      "nO2Band": { "type": "string" },
+      "o3Band": { "type": "string" },
+      "pM10Band": { "type": "string" },
+      "pM25Band": { "type": "string" },
+      "sO2Band": { "type": "string" },
+      "forecastText": { "type": "string" }
+    }
+  },
+  "$ref": "#/definitions/londonForecast"
+}
