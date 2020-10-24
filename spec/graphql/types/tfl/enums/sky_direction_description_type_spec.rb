@@ -3,39 +3,39 @@
 require 'rails_helper'
 
 describe Types::Tfl::Enums::SkyDirectionDescriptionType do
-  subject { described_class }
+  subject(:enum) { described_class }
 
   it { is_expected.to respond_to(:values) }
 
   it 'is expected to define an NORTH value' do
-    expect(subject.values).to include('NORTH')
+    expect(enum.values).to include('NORTH')
   end
 
   it 'is expected to define an NORTHEAST value' do
-    expect(subject.values).to include('NORTHEAST')
+    expect(enum.values).to include('NORTHEAST')
   end
 
   it 'is expected to define a EAST value' do
-    expect(subject.values).to include('EAST')
+    expect(enum.values).to include('EAST')
   end
 
   it 'is expected to define a SOUTHEAST value' do
-    expect(subject.values).to include('SOUTHEAST')
+    expect(enum.values).to include('SOUTHEAST')
   end
 
   it 'is expected to define a SOUTH value' do
-    expect(subject.values).to include('SOUTH')
+    expect(enum.values).to include('SOUTH')
   end
 
   it 'is expected to define a SOUTHWEST value' do
-    expect(subject.values).to include('SOUTHWEST')
+    expect(enum.values).to include('SOUTHWEST')
   end
 
   it 'is expected to define a WEST value' do
-    expect(subject.values).to include('WEST')
+    expect(enum.values).to include('WEST')
   end
 
   it 'is expected to define a NORTHWEST value' do
-    expect(subject.values).to include('NORTHWEST')
+    expect(enum.values).to include('NORTHWEST')
   end
 end
